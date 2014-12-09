@@ -7,19 +7,19 @@
 
 public class PA02Loan {
 	public static void main(String[] args) {
-		double p = 30000 ;
-		double i = 6.5 ;
-		int n = 60 ;
-		double r = 1 + (i/1200) ;
-		double a = p*((r-1)/(1-(Math.pow(r,(-n))))) ;
-		double totalInterest = a*n-p ;
+		double p = 30000;
+		double i = 6.5;
+		int n = 60;
+		double r = 1 + (i/1200); //calculate r for amortization formula
+		double a = p*((r-1)/(1-(Math.pow(r,(-n))))); //calculate amortization payment
+		double totalInterest = a*n-p; //calculate total interest paid over the loan
 
 		
-		System.out.println("Loan Amount: $" + p) ;
-		System.out.println("Number of Months: " + n) ;
-		System.out.println("Annual Interest rate: " + i) ;
-		System.out.println("Monthly Payment on Loan will be $" + a) ;
-		System.out.println("The total interest paid will be $" + totalInterest) ;
+		System.out.println("Loan Amount: $" + p);
+		System.out.println("Number of Months: " + n);
+		System.out.println("Annual Interest rate: " + i);
+		System.out.println("Monthly Payment on Loan will be $" + a);
+		System.out.println("The total interest paid will be $" + totalInterest);
 	}
 }
 
